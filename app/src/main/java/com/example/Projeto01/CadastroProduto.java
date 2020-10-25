@@ -14,7 +14,6 @@ import com.example.Projeto01.modelo.Produto;
 public class CadastroProduto extends AppCompatActivity {
 
 
-    private boolean edicao = false;
     private boolean excluir = false;
     private int id = 0;
     private Float valor = null;
@@ -77,7 +76,7 @@ public class CadastroProduto extends AppCompatActivity {
             Produto produto = new Produto(id, nome, valor);
             ProdutoDAO produtoDAO = new ProdutoDAO(getBaseContext());
             if (excluir) {
-                boolean excluir = produtoDAO.excluir(produto);
+                produtoDAO.excluir(produto);
             } else {
                 boolean salvou = produtoDAO.salvar(produto);
                 if (!salvou) {
