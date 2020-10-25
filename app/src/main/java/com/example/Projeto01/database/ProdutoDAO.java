@@ -14,6 +14,7 @@ public class ProdutoDAO {
     private final String SQL_LISTAR_TODOS = "SELECT * FROM " + ProdutoEntity.TABLE_NAME;
     private DBGateway dbGateway;
 
+
     public ProdutoDAO(Context context){
         dbGateway=DBGateway.getInstance(context);
     }
