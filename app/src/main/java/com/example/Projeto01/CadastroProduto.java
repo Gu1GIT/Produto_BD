@@ -80,8 +80,7 @@ public class CadastroProduto extends AppCompatActivity {
                 boolean excluir = produtoDAO.excluir(produto);
             } else {
                 boolean salvou = produtoDAO.salvar(produto);
-                if (salvou) {
-                } else {
+                if (!salvou) {
                     Toast.makeText(CadastroProduto.this, "Erro ao salvar", Toast.LENGTH_LONG).show();
                 }
             }
